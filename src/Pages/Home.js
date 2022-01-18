@@ -4,40 +4,44 @@ import ArtistCard from '../components/ArtistCard';
 // Data
 import Data from '../artists';
 const Home = () => {
+  console.log(Data);
   const [filterdArtist, setFilterdArtists] = useState(Data);
   const [query, setQuery] = useState('');
   const handleValueChange = (e) => {
     setQuery(e.target.value);
     const filterdArtists = Data.filter((artist) => {
       const Name = artist.artistName
+        .toString()
         .toLowerCase()
         .includes(query.toLowerCase());
       const Track = artist.trackName
+        .toString()
         .toLowerCase()
         .includes(query.toLowerCase());
-      return Name ? Name : Track;
+      return Name ? Name : Track ? Track : null;
     });
     setFilterdArtists(filterdArtists);
-    console.log(filterdArtist);
   };
   return (
     <div>
       <form className='search__form'>
         <input
           placeholder='Search Bar'
-          type='text'
+          type='search'
           className='search__btn'
           onChange={handleValueChange}
+          value={query}
           id='search_bar'
           aria-label='Search'
         />
       </form>
       <div className='artist'>
-        {filterdArtist.map((artist) => (
-          <div key={artist.artistId}>
-            <ArtistCard artist={artist} />
-          </div>
-        ))}
+        {filterdArtist &&
+          filterdArtist.map((artist) => (
+            <div key={artist.artistId}>
+              <ArtistCard artist={artist} />
+            </div>
+          ))}
       </div>
     </div>
   );

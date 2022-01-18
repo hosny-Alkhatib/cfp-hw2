@@ -13,7 +13,7 @@ import NavBar from './components/NavBar';
 import Artist from './Pages/Artist';
 
 function App() {
-  const [auth, setAuth] = useState(localStorage.getItem('auth') ? true : false);
+  const [auth, setAuth] = useState(localStorage.auth ? true : false);
   const [allSaved, setAllSaved] = useState(() => {
     if (localStorage.getItem('allSaved')) {
       return JSON.parse(localStorage.getItem('allSaved'));
@@ -21,7 +21,7 @@ function App() {
     return [];
   });
   useEffect(() => {
-    localStorage.Saved = JSON.stringify(allSaved);
+    localStorage.setItem('Saved', JSON.stringify(allSaved));
   }, [allSaved]);
   return (
     <div>
