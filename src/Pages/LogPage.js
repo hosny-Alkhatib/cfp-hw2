@@ -14,7 +14,7 @@ const LogPage = ({ setAuth }) => {
         <label className='text'>Password:</label>
         <input type='password' placeholder='password' id='password' />
       </form>
-      <button onClick={logIn} className='btn'>
+      <button onClick={logIn} className='btn btn-primary'>
         <span>log in</span>
       </button>
     </div>

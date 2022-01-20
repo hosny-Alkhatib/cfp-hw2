@@ -59,7 +59,7 @@ li {
 }
 .links {
   text-decoration: none;
-  color: whitesmoke;
+  color: rgb(43, 206, 198);
   font-weight: bold;
 }
 .navBtn {
@@ -123,10 +123,8 @@ li {
     padding: 9px 10px 9px 32px;
     margin-top: 20px;
     display: block;
-    margin-right: 160px;
+    margin-right: 200px;
     width: 280px;
-    margin-left: -3px;
-    margin-left: 18px;
     height: 40px;
     border: none;
     outline: none;
@@ -161,6 +159,7 @@ li {
   outline: none;
   border-radius: 5px;
   transition: all 0.5s;
+  margin-right: 50px;
 }
 .search__form {
   padding-left: 40%;
@@ -178,7 +177,7 @@ li {
 }
 
 .artist__card img {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
   height: 100%;
 }
@@ -208,7 +207,7 @@ li {
   margin-top: 10px;
 }
 .text {
-  color: rgb(29, 100, 80);
+  color: #fff;
   font-family: Arial, Helvetica;
   padding: 5px 10px;
   display: block;
@@ -219,12 +218,19 @@ li {
 }
 
 .trackImage {
-  width: 500px;
-  height: 400px;
+  width: 100%;
+  /* height: 100%; */
   margin: 15px 10px;
-  display: inline;
+  /* display: inline; */
 }
 
 .artist__name {
-  color: rgb(43, 205, 226);
+  color: #fff;
+}
+
+.contactus {
+  color: white;
+}
+.center {
+  text-align: center;
 }

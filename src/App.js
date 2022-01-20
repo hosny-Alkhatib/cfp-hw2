@@ -15,8 +15,8 @@ import Artist from './Pages/Artist';
 function App() {
   const [auth, setAuth] = useState(localStorage.auth ? true : false);
   const [allSaved, setAllSaved] = useState(() => {
-    if (localStorage.getItem('allSaved')) {
-      return JSON.parse(localStorage.getItem('allSaved'));
+    if (localStorage.getItem('Saved')) {
+      return JSON.parse(localStorage.getItem('Saved'));
     }
     return [];
   });

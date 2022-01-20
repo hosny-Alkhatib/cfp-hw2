@@ -8,8 +8,6 @@ const Artist = ({ allSaved, setAllSaved }) => {
       setAllSaved([...allSaved, artist]);
       localStorage.Saved = JSON.stringify([...allSaved, artist]);
       alert('Track saved successfully');
-    } else {
-      alert('Track already saved');
     }
   };
   return (

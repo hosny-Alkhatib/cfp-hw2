@@ -3,9 +3,9 @@ import SubmissionForm from '../components/SubmissionForm';
 import { Container } from 'react-bootstrap';
 const ContactUs = () => {
   return (
-    <div>
+    <div className='contactus'>
       <Container>
-        <h1>Contact Us</h1>
+        <br />
         <SubmissionForm />
       </Container>
     </div>

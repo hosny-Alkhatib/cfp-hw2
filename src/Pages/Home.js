@@ -13,12 +13,12 @@ const Home = () => {
       const Name = artist.artistName
         .toString()
         .toLowerCase()
-        .includes(query.toLowerCase());
+        .includes(e.target.value.toLowerCase());
       const Track = artist.trackName
         .toString()
         .toLowerCase()
-        .includes(query.toLowerCase());
-      return Name ? Name : Track ? Track : null;
+        .includes(e.target.value.toLowerCase());
+      return Name ? Name : Track;
     });
     setFilterdArtists(filterdArtists);
   };
@@ -27,7 +27,7 @@ const Home = () => {
       <form className='search__form'>
         <input
           placeholder='Search Bar'
-          type='search'
+          type='text'
           className='search__btn'
           onChange={handleValueChange}
           value={query}

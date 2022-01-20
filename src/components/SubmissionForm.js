@@ -2,10 +2,11 @@ import React from 'react';
 
 const SubmissionForm = () => {
   return (
-    <div>
+    <div className='center'>
       <form>
         <div>
           <label for='email'>Email address</label>
+          <br />
           <input
             type='email'
             aria-describedby='emailHelp'
@@ -17,11 +18,19 @@ const SubmissionForm = () => {
         </div>
         <br />
         <div>
-          <label>Message</label>
-          <textarea placeholder='Start typing...' rows='5'></textarea>
+          <label for='massage'>Massage</label>
+          <br />
+          <input
+            type='text'
+            aria-describedby='emailHelp'
+            placeholder='Start typing...'
+            tabIndex='3'
+            name='massage'
+            id='email'
+          />
         </div>
         <br />
-        <button type='submit' className='btn'>
+        <button type='submit' className='btn btn-primary'>
           Send
         </button>
       </form>

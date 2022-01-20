@@ -10,7 +10,7 @@ const NavBar = ({ auth, setAuth }) => {
     <div>
       <nav>
         <Link to='/' className='links'>
-          <h2>MGB</h2>
+          <h2 style={{ color: 'white' }}>MGB</h2>
         </Link>
         {auth && (
           <>
