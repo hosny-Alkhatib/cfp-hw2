@@ -13,7 +13,7 @@ import NavBar from './components/NavBar';
 import Artist from './Pages/Artist';
 
 function App() {
-  const [auth, setAuth] = useState(localStorage.auth ? true : false);
+  const [auth, setAuth] = useState(!localStorage.auth ? false : true);
   const [allSaved, setAllSaved] = useState(() => {
     if (localStorage.getItem('Saved')) {
       return JSON.parse(localStorage.getItem('Saved'));
